@@ -1,0 +1,22 @@
+{
+  "name": "leafdb",
+  "version": "0.1.0",
+  "description": "Tiny NoSQL-ish data storage engine",
+  "main": "index.js",
+  "bin": {
+    "leafdb": "./bin/leafdb.js"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NicolasThebaud/leafDB.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NicolasThebaud/leafDB/issues"
+  },
+  "homepage": "https://github.com/NicolasThebaud/leafDB#readme",
+  "devDependencies": {
+  }
+}
