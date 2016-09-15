@@ -3,9 +3,6 @@
   "version": "0.1.0",
   "description": "Tiny NoSQL-ish data storage engine",
   "main": "index.js",
-  "bin": {
-    "leafdb": "./bin/leafdb.js"
-  },
   "scripts": {},
   "repository": {
     "type": "git",
