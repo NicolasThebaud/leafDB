@@ -22,7 +22,7 @@ Knowing that, why would you take a full DBMS to handle a tiny dataset ?
 Some projects are just small, with little datasets. It's dirty to hardcode data in the code, but It doesn't feel quite clean to use a giant factory like MongoDB either.
 
 
-As a student, I have a few personnal projects I made for the sake of learning and praticting. Those are small projects, with small datasets (a few documents only). 
+As a student, I have a few personnal projects I made for the sake of learning and practicing. Those are small projects, with small datasets (a few documents only). 
 
 I once felt quite stupid installing Mongo & Robomongo, setting both up, having quite a few errors, ...
 
