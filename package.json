@@ -9,11 +9,13 @@
     "url": "git+https://github.com/NicolasThebaud/leafDB.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/NicolasThebaud/leafDB/issues"
   },
   "homepage": "https://github.com/NicolasThebaud/leafDB#readme",
-  "devDependencies": {
+  "devDependencies": {},
+  "dependencies": {
+    "leafify": "file:lib\\Leafify"
   }
 }
