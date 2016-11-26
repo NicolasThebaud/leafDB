@@ -32,6 +32,52 @@ And all this, for 4-5 JSON documents. yes.
 
 It was at this moment I knew, I f-
  Well, you get the idea.
+ 
+# How to install
+
+Note: LeafDB is not available on npm yet. I'm working on it (kinda)
+
+To install leaf, you have to download the master branch as a zip, put it somewhere on your computer (the same computer your project is on [duh] ), then install it as a local package using npm:
+
+```
+> npm install C:/whatever/folder/leafDB/
+```
+
+# How to use
+
+Note: I'm currently working on a WEB page that will contains installation & usage tutorials, as well as code samples
+
+
+To use LeafDB, you may first generate a **.leaf** file, *ie.* a collection.
+
+To do so, leafDB comes with a CLI, named **leafify** (talk about creativity), that includes one simple command:
+
+
+```
+> leafify whatever.json into <collection-name> [-o <output-dir> ] [-a <author> ]
+```
+
+This will create a **.leaf** file, named *collection-name* in a **leaves/** directory by default (if *-o* option is unset).
+You can also specify an *author* for the collection; This is purely *metadata*, it's optional.
+
+
+When you have your collections set (*ie.* your **.leaf** files), you can dive into your code.
+
+
+LeafDB currently implements :
+
+```
+getCollection(name, callback)  -> Parse a collection with a given name
+getCollectionName()            -> Returns the collection's name
+getCollectionAuthor()          -> Returns the collection's author
+getCollectionDate()            -> Returns the collection's creation date (jj/mm/aaaa-hh:mm:ss)
+
+findAll()                      -> Return all documents in the collection
+find(options)                  -> Return documents matching the pattern
+insert(doc, callback)          -> Insert a document into the collection
+update(ref, doc, callback)     -> Update all documents matched by the 'ref' object
+remove(ref, callback)          -> Remove all documents matched by the 'ref' object
+```
 
 
 # What is Leaf ?
