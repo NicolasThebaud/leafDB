@@ -1,0 +1,23 @@
+@media only screen and (min-width: 601px) { main { padding: 0 5vw; } }
+@media only screen and (min-width: 993px) { main { padding: 0 10vw; } }
+@media only screen and (min-width: 1280px) { main { padding: 0 15vw; } }
+
+nav { padding-left: 5vw; padding-top: .5em; }
+nav ul { padding-left: 4em; }
+nav ul a:hover { background-color: rgba(67, 160, 71, .3); }
+iframe { float: right !important; }
+footer { padding: 1.5em; }
+h1 { font-variant: small-caps; font-weight: lighter; font-size: 300%; }
+
+.edge { position: absolute; top: 0; left: 0; width: 100vw; height: .5em; }
+.no-shade { box-shadow: none; }
+.brand-logo img { height: 1em; vertical-align: baseline; }
+.full-width { width: 100%; }
+.sub-h1 { font-variant: small-caps; margin: 0; margin-bottom: 7em; }
+.disclaimer {
+  margin-top: 3em;
+  padding: 0 .3em;
+  font-size: 125%;
+  border: solid #666;
+  border-width: 0 1px 0 1px;
+}
