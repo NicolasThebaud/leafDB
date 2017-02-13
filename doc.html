@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>LeafDB</title>
+	
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css" rel="stylesheet">
+		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link href="ressources/css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<main class="grey-text text-darken-1">
+			<div class="edge green darken-1"></div>
+			<nav class="transparent no-shade">
+			<div class="nav-wrapper ">
+				<a href="#" class="brand-logo left green-text text-darken-1">
+				<img src="ressources/img/logo.png" /> LeafDB
+				</a>
+				<ul id="nav-mobile" class="right hide-on-med-and-down">
+				<li><a class="grey-text text-darken-2" href="index.html">Overview</a></li>
+				<li><a class="grey-text text-darken-2" href="install.html">Installation</a></li>
+				<li><a class="grey-text text-darken-2 active" href="#!">Documentation</a></li>
+				</ul>
+			</div>
+			</nav>
+
+			<p class="center disclaimer">To use LeafDB, you may first generate a <b>.leaf</b> file, <i>ie.</i> a collection.<br/>
+				To do so, leafDB comes with a CLI, named leafify (talk about creativity), that includes one simple command:</p>
+
+			<div class="separator">
+				<div class="container">
+					<div class="row">
+						<div class="col s12 m8 offset-m2">
+							<div class="card grey lighten-2">
+							<div class="card-content white-text">
+								<code>
+									> leafify whatever.json into &lt;collection-name> [-o &lt;output-dir> ] [-a &lt;author> ]
+								</code>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<p class="center">This will create a <b>.leaf</b> file, named <i>collection-name</i> in a <b>leaves/</b> directory by default (if -o option is unset).<br/>
+					You can also specify an author for the collection; This is pure <i>metadata</i>, it's optional.</p>
+
+				<div class="separator">
+					<div class="api">
+						<h2 class="api-category green-text text-darken-1">Generic methods</h2>
+						<div class="container">
+							<div class="api-method">
+								<h3 class="green-text text-darken-1">leaf.getCollection(name, callback)</h3>
+								<p class="api-desc small-caps">Parse the collection with the given name and returns it through the callback (if it exists)</p>
+
+								<span class="green-text text-darken-1">exemple :</span>
+								<div class="api-exemple grey lighten-2">
+									<code>
+										const leaf = require('leafdb') <br/>
+										leaf.getCollection("exemple", (err,res)=>{ <br/>
+											&nbsp; if(err) throw err <br/>
+											&nbsp; var collection = res <br/>
+										})
+									</code>
+								</div>
+							</div>
+							<hr/>
+							<div class="api-method">
+								<h3 class="green-text text-darken-1">collection.getCollectionName()</h3>
+								<p class="api-desc small-caps">Returns the collection's name<br/>
+									<span class="green-text text-darken-1">NOTE: returns an empty string when undefined</span></p>
+							</div>
+							<hr/>
+							<div class="api-method">
+								<h3 class="green-text text-darken-1">collection.getCollectionAuthor()</h3>
+								<p class="api-desc small-caps">Returns the collection's author<br/>
+									<span class="green-text text-darken-1">NOTE: returns an empty string when undefined</span></p>
+							</div>
+							<hr/>
+							<div class="api-method">
+								<h3 class="green-text text-darken-1">collection.getCollectionName()</h3>
+								<p class="api-desc small-caps">Returns the collection's creation date (jj/mm/aaaa-hh:mm:ss)<br/>
+									<span class="green-text text-darken-1">NOTE: returns an empty string when undefined</span></p>
+							</div>
+						</div>
+
+						<h2 class="api-category green-text text-darken-1">Collection methods</h2>
+						<div class="container">
+							<div class="api-method">
+								<h3 class="green-text text-darken-1">collection.findAll()</h3>
+								<p class="api-desc small-caps">Return all documents in the collection</p>
+							</div>
+							<hr/>
+							<div class="api-method">
+								<h3 class="green-text text-darken-1">collection.find(options)</h3>
+								<p class="api-desc small-caps">Return documents matching the pattern</p>
+							</div>
+							<hr/>
+							<div class="api-method">
+								<h3 class="green-text text-darken-1">collection.insert(doc, callback)</h3>
+								<p class="api-desc small-caps">Insert a document into the collection</p>
+							</div>
+							<hr/>
+							<div class="api-method">
+								<h3 class="green-text text-darken-1">collection.update(ref, doc, callback)</h3>
+								<p class="api-desc small-caps">Update all documents matched by the 'ref' object</p>
+							</div>
+							<hr/>
+							<div class="api-method">
+								<h3 class="green-text text-darken-1">collection.remove(ref, callback)</h3>
+								<p class="api-desc small-caps">Remove all documents matched by the 'ref' object</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>
