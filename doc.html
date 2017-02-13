@@ -98,16 +98,43 @@
 							<div class="api-method">
 								<h3 class="green-text text-darken-1">collection.insert(doc, callback)</h3>
 								<p class="api-desc small-caps">Insert a document into the collection</p>
+								<span class="green-text text-darken-1">exemple :</span>
+								<div class="api-exemple grey lighten-2">
+									<code>
+										collection.insert({'a':3}, (err,res)=>{<br/>
+											&nbsp; if(err) throw err <br/>
+											&nbsp; console.log('new collection', res) <br/>
+										})
+									</code>
+								</div>
 							</div>
 							<hr/>
 							<div class="api-method">
 								<h3 class="green-text text-darken-1">collection.update(ref, doc, callback)</h3>
 								<p class="api-desc small-caps">Update all documents matched by the 'ref' object</p>
+								<span class="green-text text-darken-1">exemple :</span>
+								<div class="api-exemple grey lighten-2">
+									<code>
+										collection.update({'a': 3}, {'a': 4}, (err,res)=>{<br/>
+											&nbsp; if(err) throw err <br/>
+											&nbsp; console.log('newly added document', res) <br/>
+										})
+									</code>
+								</div>
 							</div>
 							<hr/>
 							<div class="api-method">
 								<h3 class="green-text text-darken-1">collection.remove(ref, callback)</h3>
 								<p class="api-desc small-caps">Remove all documents matched by the 'ref' object</p>
+								<span class="green-text text-darken-1">exemple :</span>
+								<div class="api-exemple grey lighten-2">
+									<code>
+										collection.remove({'a':'4'}, (err,res)=>{<br/>
+											&nbsp; if(err) throw err <br/>
+											&nbsp; console.log('updated collection', res) <br/>
+										})
+									</code>
+								</div>
 							</div>
 						</div>
 					</div>
